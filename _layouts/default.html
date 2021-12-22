@@ -1,13 +1,21 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
-    <title>{{ page.title }}</title>
-		<link rel="stylesheet" href="/assets/css/styles.css">
-  </head>
-  <body>
-		{% include navigation.html %}
-    {{ content }}
-  </body>
+	<div id="wrap">
+		<head>
+			<meta charset="utf-8">
+			<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+			<title>{{ page.title }}</title>
+			<link rel="stylesheet" href="/assets/css/styles.css">
+		</head>
+		<body>
+			<div id="main">
+				{% include navigation.html %}
+				{{ content }}
+			</div>
+		</body>
+	</div>
+	<footer>
+		<p>This pages source code:
+		<a href="https://github.com/Tyhjakuori/Tyhjakuori.github.io">Github</a></p>
+	</footer>
 </html>

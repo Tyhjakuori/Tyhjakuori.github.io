@@ -4,12 +4,12 @@
 		<head>
 			<meta charset="utf-8">
 			<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+			{% include navigation.html %}
 			<title>{{ page.title }}</title>
 			<link rel="stylesheet" href="/assets/css/styles.css">
 		</head>
 		<body>
 			<div id="main">
-				{% include navigation.html %}
 				{{ content }}
 			</div>
 		</body>

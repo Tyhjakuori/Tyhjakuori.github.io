@@ -3,6 +3,6 @@ title: About
 sitemap: false
 ---
 
-# About page
+# About
 
-about me page
+Tyhjakuori is an self-taught programmer based in Finland.

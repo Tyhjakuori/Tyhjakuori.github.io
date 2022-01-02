@@ -1,17 +1,21 @@
----
-layout: default
----
-<h1>{{ page.title }}</h1>
-
-<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
-<p>
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
-  {% endif %}
-</p>
-
-{{ content }}
-
-<a href="#top">Back to top</a>
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+		{% include navigation.html %}
+	</head>
+	<body>
+		<div class="blog">
+			<h1>{{ page.title }}</h1>
+			<ul>
+				{{ content }}	
+			</ul>
+		</div>
+		<a href="#top">Back to top</a>
+	</body>
+	<footer>
+		<p>This pages source code:
+		<a href="https://github.com/Tyhjakuori/Tyhjakuori.github.io">Github</a></p>
+	</footer>
+</html>

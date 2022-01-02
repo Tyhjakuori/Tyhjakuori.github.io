@@ -9,7 +9,7 @@ sitemap: false
 		<title>{{ page.title }}</title>
   </head>
   <body>
-		<h1 class="headertext">Welcome</h1>
+		<h1 style="text-align:center;">Welcome</h1>
 		<div class="imagelinks">
 				<img src="/assets/images/github_logo.png">
 				<span>
@@ -26,6 +26,15 @@ sitemap: false
 		<div class="maintext">
 			<p>I'm a self-taught programmer who likes coffee and a good challenge.</p>
 			<p>Below are some of my blog posts that you might find interesting to read:</p>
+		</div>
+		<div class="mainposts">
+			<ul>
+				{% for post in site.posts limit:3 %}
+				<li>
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				</li>
+			{% endfor %}
+			</ul>
 		</div>
   </body>
 </html>
